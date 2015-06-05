@@ -1,0 +1,5 @@
+fasd_cache="$HOME/.fasd-init-bash"#fasd
+eval "$(fasd --init auto)"
+
+set -o emacs
+export PATH="~/bin:$PATH"
