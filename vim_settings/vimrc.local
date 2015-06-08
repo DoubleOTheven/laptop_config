@@ -70,10 +70,7 @@ vmap <expr> < KeepVisualSelection("<")
 augroup general
   autocmd!
   au BufWritePost .vimrc source ~/.vimrc "Source .vimrc on write
-  au BufWritePost .vimrc call Pl#Load() "reload vim-powerline plugin
   au BufWritePost .vimrc.bundles source ~/.vimrc "Source .vimrc.bundles on write
-  au BufWritePost .vimrc.bundles call Pl#Load() "reload vim-powerline plugin
-  au BufWritePre * silent! :EraseBadWhitespace
 
   au BufLeave,FocusLost * silent! wall " Save if focus lost
   au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
