@@ -1,5 +1,6 @@
 Plugin 'Lokaltog/vim-easymotion.git'
 Plugin 'Rip-Rip/clang_complete'
+Plugin 'bitc/vim-bad-whitespace'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
