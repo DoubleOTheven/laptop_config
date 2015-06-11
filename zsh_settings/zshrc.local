@@ -4,5 +4,8 @@ eval "$(fasd --init auto)"
 ### Postgres
 alias startpg='pg_ctl start -D /usr/local/var/postgres'
 alias stoppg='pg_ctl -D /usr/local/var/postgres'
+
+echo 'eval "$(rbenv init -)"'
+
 set -o emacs
 export PATH="~/bin:$PATH"
