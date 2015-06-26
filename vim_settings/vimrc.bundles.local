@@ -5,6 +5,7 @@ Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
 Plugin 'jonathanfilip/vim-lucius'
+Plugin 'mxw/vim-jsx'
 Plugin 'powerline/powerline'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdcommenter'
