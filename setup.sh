@@ -2,6 +2,9 @@
 cp ./vim_settings/vimrc.local ~/.vimrc.local
 cp ./vim_settings/vimrc.bundles.local ~/.vimrc.bundles.local
 
+# git aliases
+cp ./zsh_settings/git-aliases ~/.git-aliases
+
 # Zsh
 cp ./zsh_settings/zshrc.local ~/.zshrc.local
 

@@ -9,3 +9,5 @@ eval "$(rbenv init -)"
 
 set -o emacs
 export PATH="~/bin:$PATH"
+
+[[ -f ~/.git-aliases ]] && source ~/.git-aliases
