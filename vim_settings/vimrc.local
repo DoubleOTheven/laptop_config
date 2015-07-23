@@ -47,6 +47,7 @@ map               <F8> :BufExplorer<cr>
 map               \  :NERDTreeToggle<CR>
 map               \| :NERDTreeFind<CR>
 nmap     <silent> <F6> :TagbarToggle<CR>
+nnoremap          ; :
 
 " switch to the last file
 nnoremap <leader><leader>l <c-^>
