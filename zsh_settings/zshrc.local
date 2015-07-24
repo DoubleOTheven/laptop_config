@@ -1,9 +1,10 @@
 fasd_cache="$HOME/.fasd-init-bash"#fasd
 eval "$(fasd --init auto)"
 
-### Postgres
 alias startpg='pg_ctl start -D /usr/local/var/postgres'
 alias stoppg='pg_ctl -D /usr/local/var/postgres'
+
+alias startredis='redis-server /usr/local/etc/redis.conf'
 
 eval "$(rbenv init -)"
 
