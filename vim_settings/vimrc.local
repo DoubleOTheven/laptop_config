@@ -21,7 +21,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_html_tidy_ignore_errors = [" proprietary attribute \"ng-"]
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_enable_elixir_checker=1
 
 " Get C++ syntax from Clang
 let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/'
@@ -67,6 +67,18 @@ nnoremap <C-l> <C-w>l
 
 " vim-jsx config: allow jsx in .js files
 let g:jsx_ext_required = 0
+"
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 augroup general
   autocmd!
@@ -74,7 +86,6 @@ augroup general
   au BufWritePost .vimrc.bundles source ~/.vimrc "Source .vimrc.bundles on write
 
   au BufLeave,FocusLost * silent! wall " Save if focus lost
-  au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
   au BufRead,BufNewFile *.coffee set ft=coffee syntax=coffee
   au BufRead,BufNewFile /etc/nginx/* set ft=nginx
   au BufRead,BufNewFile *.json set ft=json
