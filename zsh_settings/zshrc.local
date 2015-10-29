@@ -6,6 +6,8 @@ alias stoppg='pg_ctl -D /usr/local/var/postgres'
 
 alias startredis='redis-server /usr/local/etc/redis.conf'
 
+alias startkannel='/usr/local/kannel/sbin/bearerbox -v 0 /usr/local/kannel/smskannel.conf'
+
 eval "$(rbenv init -)"
 
 set -o emacs
