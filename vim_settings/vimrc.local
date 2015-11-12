@@ -5,17 +5,6 @@ color lucius
 set number
 set numberwidth=3
 
-" PHP
-let g:php_smart_members      = 1
-let g:php_alt_properties     = 1
-let g:php_show_semicolon     = 1
-let g:php_smart_semicolon    = 1
-let g:php_folding            = 0
-let g:php_html_in_strings    = 1
-let g:php_parent_error_close = 1
-let g:php_parent_error_open  = 1
-let g:php_no_shorttags       = 1
-
 " Syntastic
 let g:syntastic_check_on_open = 1
 let g:syntastic_cpp_compiler = 'clang++'
@@ -37,12 +26,6 @@ nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
 
-" Commands and mappings
-command! Vimrc e ~/.vimrc
-command! Vlocal e ~/.vimrc.local
-command! Bundles e ~/.vimrc.bundles
-command! Blocal e ~/.vimrc.bundles.local
-
 " Key mappings
 map               <F8> :BufExplorer<cr>
 map               \  :NERDTreeToggle<CR>
@@ -50,7 +33,7 @@ map               \| :NERDTreeFind<CR>
 nmap              <silent> <F6> :TagbarToggle<CR>
 nnoremap          ; :
 
-" Visual Block mode is far more useful that Visual mode (so swap the commands)...
+" Swap Visual Bloack for Visual mode
 nnoremap v <C-V>
 nnoremap <C-V> v
 vnoremap v <C-V>
@@ -79,14 +62,7 @@ endif
 
 augroup general
   autocmd!
-  au BufWritePost .vimrc source ~/.vimrc "Source .vimrc on write
-  au BufWritePost .vimrc.bundles source ~/.vimrc "Source .vimrc.bundles on write
-
   au BufLeave,FocusLost * silent! wall " Save if focus lost
-  au BufRead,BufNewFile *.coffee set ft=coffee syntax=coffee
-  au BufRead,BufNewFile /etc/nginx/* set ft=nginx
-  au BufNewFile,BufRead *.markdown,*.md, set ft=markdown
-  au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,*.cap,.irbrc,irb_tempfile*} set ft=ruby
   au BufWritePre * silent! :EraseBadWhitespace
 
   au BufwinEnter bash* set nocursorline
@@ -108,8 +84,4 @@ augroup general
   au BufReadPost *   if line("'\"") > 1 && line("'\"") <= line("$") |
         \ exe "normal! g`\"" |
         \ endif
-
-  " reload .vimrc after saving
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
-
 augroup END
