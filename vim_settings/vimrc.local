@@ -33,12 +33,6 @@ map               \| :NERDTreeFind<CR>
 nmap              <silent> <F6> :TagbarToggle<CR>
 nnoremap          ; :
 
-" Swap Visual Bloack for Visual mode
-nnoremap v <C-V>
-nnoremap <C-V> v
-vnoremap v <C-V>
-vnoremap <C-V> v
-
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
