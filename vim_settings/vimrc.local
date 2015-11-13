@@ -1,5 +1,13 @@
 set autowrite
-color lucius
+
+" gui settings
+if (&t_Co == 256 || has('gui_running'))
+  if ($TERM_PROGRAM == 'iTerm.app')
+    colorscheme lucius
+  else
+    colorscheme desert
+  endif
+endif
 
 " show line numbers
 set number
