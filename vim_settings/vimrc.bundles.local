@@ -6,6 +6,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
 Plugin 'jonathanfilip/vim-lucius'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'mxw/vim-jsx'
 Plugin 'powerline/powerline'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
