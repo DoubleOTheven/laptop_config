@@ -6,6 +6,7 @@ if (&t_Co == 256 || has('gui_running'))
     colorscheme lucius
   else
     colorscheme desert
+    colorscheme lucius
   endif
 endif
 
