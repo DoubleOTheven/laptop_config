@@ -2,6 +2,9 @@
 cp ./vim_settings/vimrc.local ~/.vimrc.local
 cp ./vim_settings/vimrc.bundles.local ~/.vimrc.bundles.local
 
+# ES6 Linter setup
+cp ./misc/eslintrc ~/.eslintrc
+
 # Elixir
 cp ./elixir_settings/iex.exs ~/.iex.exs
 

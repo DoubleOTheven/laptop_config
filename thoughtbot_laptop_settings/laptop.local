@@ -11,3 +11,6 @@ brew install fasd
 gem install_or_update 'mailcatcher'
 gem_install_or_update 'parity'
 
+npm install -g eslint
+npm install -g babel-eslint
+npm install -g eslint-plugin-react
