@@ -3,6 +3,9 @@ cp ./vim_settings/vimrc.local ~/.vimrc.local
 cp ./vim_settings/vimrc.bundles.local ~/.vimrc.bundles.local
 
 # ES6 Linter setup
+npm install -g eslint
+npm install -g babel-eslint
+npm install -g eslint-plugin-react
 cp ./misc/eslintrc ~/.eslintrc
 
 # Elixir
