@@ -3,8 +3,11 @@ set autowrite
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'iTerm.app')
+    " TODO FIgure out why lusicus doesn't work without first loading desert
+    colorscheme desert
     colorscheme lucius
   else
+    " TODO FIgure out why lusicus doesn't work without first loading desert
     colorscheme desert
     colorscheme lucius
 
@@ -80,10 +83,10 @@ augroup general
   autocmd FileType markdown setlocal spell
 
   "Wrap at 80 characters
-  autocmd BufRead, BufNewFile *.md setlocal textwidth=80
+  " autocmd BufRead, BufNewFile *.md setlocal textwidth=80
 
   " Automatically wrap at 72 characters and spell check git commit messages
-  autocmd FileType gitcommit setlocal textwidth=72
+  " autocmd FileType gitcommit setlocal textwidth=72
   autocmd FileType gitcommit setlocal spell
 
   "Allow autocomplete for hyphenated words
