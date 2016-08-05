@@ -82,8 +82,7 @@ augroup general
   "Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
 
-  "Wrap at 80 characters
-  " autocmd BufRead, BufNewFile *.md setlocal textwidth=80
+  autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 expandtab
 
   autocmd FileType gitcommit setlocal spell
 
