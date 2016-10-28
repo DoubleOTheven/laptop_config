@@ -22,6 +22,8 @@ endif
 set number
 set numberwidth=3
 
+au BufRead,BufNewFile *.es6 set filetype=javascript
+
 " Syntastic
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
@@ -38,7 +40,7 @@ let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchain
 set textwidth=120
 set colorcolumn=+1
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+match OverLength /\%121v.\+/
 
 " vim-rspec mappings
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
@@ -82,7 +84,8 @@ augroup general
   "Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
 
-  autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 expandtab
+
+  autocmd Filetype javascript, setlocal ts=4 sw=4 sts=0 expandtab
 
   autocmd FileType gitcommit setlocal spell
 
