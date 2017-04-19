@@ -1,56 +1,42 @@
 set autowrite
 
-" gui settings
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'iTerm.app')
-    " TODO FIgure out why lusicus doesn't work without first loading desert
     colorscheme desert
     colorscheme lucius
   else
-    " TODO FIgure out why lusicus doesn't work without first loading desert
     colorscheme desert
     colorscheme lucius
 
-    " Turn off annoying bell sound
     set noerrorbells
     set novisualbell
     autocmd! GUIEnter * set vb t_vb=
   endif
 endif
 
-" show line numbers
 set number
 set numberwidth=3
 
 au BufRead,BufNewFile *.es6 set filetype=javascript
 
-" Syntastic
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_enable_elixir_checker=1
 let g:syntastic_javascript_checkers = ['eslint']
 
-" Cntrl P
 let g:ctrlp_custom_ignore = '\v[\/](node_modules)|(\.(swp|git))$'
-
-" Mustache Handlebars convenient abreviations
 let g:mustache_abbreviations = 1
-
-" Get C++ syntax from Clang
 let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/'
 
-" Make it obvious where 120 characters is
 set textwidth=120
 set colorcolumn=+1
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%121v.\+/
 
-" vim-rspec mappings
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
 
-" Key mappings
 map               <F8> :BufExplorer<cr>
 map               \  :NERDTreeToggle<CR>
 map               \| :NERDTreeFind<CR>
@@ -63,10 +49,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" vim-jsx config: allow jsx in .js files
 let g:jsx_ext_required = 0
 "
-" The Silver Searcher
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
