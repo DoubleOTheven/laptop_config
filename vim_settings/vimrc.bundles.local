@@ -15,6 +15,7 @@ Plugin 'powerline/powerline'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'tomlion/vim-solidity'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-haml'
 Plugin 'vim-scripts/bufexplorer.zip'
