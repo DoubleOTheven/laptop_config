@@ -19,10 +19,17 @@ set numberwidth=3
 
 au BufRead,BufNewFile *.es6 set filetype=javascript
 
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
-let g:syntastic_enable_elixir_checker=1
-let g:syntastic_javascript_checkers = ['eslint']
+" Disable inherited syntastic
+let g:syntastic_mode_map = {
+  \ "mode": "passive",
+  \ "active_filetypes": [],
+  \ "passive_filetypes": [] }
+
+" Run NeoMake on read and write operations
+autocmd! BufReadPost,BufWritePost * Neomake
+
+let g:neomake_serialize = 1
+let g:neomake_serialize_abort_on_error = 1
 
 let g:ctrlp_custom_ignore = '\v[\/](node_modules)|(\.(swp|git))$'
 let g:mustache_abbreviations = 1
