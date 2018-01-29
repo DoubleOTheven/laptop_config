@@ -11,6 +11,7 @@ Plugin 'jonathanfilip/vim-lucius'
 Plugin 'mfukar/robotframework-vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'mxw/vim-jsx'
+Plugin 'neomake/neomake'
 Plugin 'powerline/powerline'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdcommenter'
