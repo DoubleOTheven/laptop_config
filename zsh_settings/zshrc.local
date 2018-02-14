@@ -6,6 +6,11 @@ alias stoppg='pg_ctl -D /usr/local/var/postgres'
 
 alias startredis='redis-server /usr/local/etc/redis.conf'
 
+# expo/react native
+alias eprc="exp publish --release-channel"
+alias ebarc="exp build:android --release-channel"
+alias ebirc="exp build:ios --release-channel"
+
 alias startkannel='/usr/local/kannel/sbin/bearerbox -v 0 /usr/local/kannel/smskannel.conf'
 
 eval "$(rbenv init -)"
