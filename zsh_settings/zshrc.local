@@ -18,9 +18,8 @@ eval "$(rbenv init -)"
 
 set -o emacs
 
-export PATH="~/bin:$PATH"
-
-export PS1="%n %B%~%b $ "
+autoload -U colors && colors
+export PS1="%{%F{blue}%}%n%{%f%} %{%F{yellow}%}%~%{%f%} $ "
 
 [[ -f ~/.zshrc.local-env ]] && source ~/.zshrc.local-env
 [[ -f ~/.git-aliases ]] && source ~/.git-aliases
