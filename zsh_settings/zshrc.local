@@ -17,7 +17,10 @@ alias startkannel='/usr/local/kannel/sbin/bearerbox -v 0 /usr/local/kannel/smska
 eval "$(rbenv init -)"
 
 set -o emacs
+
 export PATH="~/bin:$PATH"
+
+export PS1="%n %B%~%b $ "
 
 [[ -f ~/.zshrc.local-env ]] && source ~/.zshrc.local-env
 [[ -f ~/.git-aliases ]] && source ~/.git-aliases
