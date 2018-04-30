@@ -19,17 +19,12 @@ set numberwidth=3
 
 au BufRead,BufNewFile *.es6 set filetype=javascript
 
-" Disable inherited syntastic
-let g:syntastic_mode_map = {
-  \ "mode": "passive",
-  \ "active_filetypes": [],
-  \ "passive_filetypes": [] }
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
 
-" Run NeoMake on read and write operations
-autocmd! BufReadPost,BufWritePost * Neomake
-
-let g:neomake_serialize = 1
-let g:neomake_serialize_abort_on_error = 1
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
 
 let g:ctrlp_custom_ignore = '\v[\/](node_modules)|(\.(swp|git))$'
 let g:mustache_abbreviations = 1
